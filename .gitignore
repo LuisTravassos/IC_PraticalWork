@@ -153,5 +153,6 @@ cython_debug/
 
 #Files
 Fase1/Dataset/
+Fase1/Dataset2/
 Fase1/OriginalDataset.zip
 Fase1/Dataset.zip
