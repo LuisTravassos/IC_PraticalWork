@@ -1,0 +1,15 @@
+Dataset_Menor (50 img por class):
+PSO:
+Acc -> 79.46%
+Melhor taxa de aprendizado: 0.00016697016593511955
+Melhor taxa de dropout: 0.40144026943574496
+
+Random:
+Acc -> 86.77%
+Melhor taxa de aprendizado: 0.0004947772199932062
+Melhor taxa de dropout: 0.18104244959298804
+
+Grid:
+Acc -> 84.18%
+Melhor taxa de aprendizado: 0.001
+Melhor taxa de dropout: 0.5
