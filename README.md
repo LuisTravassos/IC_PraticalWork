@@ -27,14 +27,11 @@ This repository serves as a code storage for the project. For a more professiona
 The project includes a **dataset** folder that serves as an example of the original dataset used. The dataset is divided into three subfolders:
 
 - **clean**: Images of clean streets.
-  <br>
-  <img src="dataset/clean/Clean_0054.png" alt="Clean Street Example" width="350"/>
+  <br><img src="dataset/clean/Clean_0054.png" alt="Clean Street Example" width="350"/>
 - **litter**: Images of streets with litter.
-  <br>
-  <img src="dataset/litter/Litter_0073.png" alt="Littered Street Example" width="350"/>
+  <br><img src="dataset/litter/Litter_0073.png" alt="Littered Street Example" width="350"/>
 - **recycle**: Images of streets with recycling bins (ecopoints).
-  <br>
-  <img src="dataset/recycle/Ecoponto_0033.png" alt="Recycle Bin Example" width="350"/>
+  <br><img src="dataset/recycle/Ecoponto_0033.png" alt="Recycle Bin Example" width="350"/>
 
 Each folder contains 5 example images to illustrate the original dataset. For the complete dataset, you can access it on [Kaggle](https://www.kaggle.com/datasets/nw8vqlafd/dataset-ic).
 
