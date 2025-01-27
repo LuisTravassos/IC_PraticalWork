@@ -1,116 +1,83 @@
 # Image Classification Project
 
-This repository contains the code for an AI system designed to classify urban street images into three categories: **clean**, **littered**, and **with recycling bins (ecopoints)**. The project utilizes deep learning techniques, including transfer learning, to address the challenges posed by image variability in urban environments. This work aims to contribute to urban management and societal well-being through AI-powered image analysis.
+Welcome to the **Image Classification Project**! This repository contains the code and documentation for classifying urban street images into three categories: **clean**, **littered**, and **with recycling bins (ecopoints)**. The project leverages deep learning techniques, including transfer learning, and various hyperparameter optimization methods to achieve efficient classification.
 
 ---
 
 ## Project Overview
 
-### Objectives
-- Build a robust **Convolutional Neural Network (CNN)** for classifying urban images.
-- Optimize model performance through hyperparameter tuning methods: **PSO (Particle Swarm Optimization)**, **Grid Search**, and **Random Search**.
-- Enhance model accuracy using **transfer learning** with pre-trained networks.
-- Assess model performance with classification metrics such as precision, recall, F1-score, and AUC.
-
-### Motivation
-Urban image classification is crucial for smart city management. This project focuses on developing an efficient AI solution to aid in environmental monitoring, specifically street cleanliness and recycling initiatives.
-
----
-
-## Methodologies
-
-### Implemented Strategies
-1. **PSO (Particle Swarm Optimization):** A method for optimizing hyperparameters using a particle swarm approach.
-2. **Random Search:** A stochastic method for hyperparameter tuning, exploring random combinations.
-3. **Grid Search:** A thorough method that tests all possible combinations of hyperparameters.
-4. **Simple Model:** A baseline model that uses the best-performing hyperparameters found through optimization.
-5. **User-Specific Model:** A model designed for custom datasets and user-defined classifications.
-
-### Dataset
-- The project includes a **dataset** folder with subdirectories: `clean`, `litter`, and `recycle`. Each subdirectory contains 5 example images from the original dataset.
-- The **original dataset** used for the project can be accessed on [Kaggle](https://www.kaggle.com/datasets/nw8vqlafd/dataset-ic).
-
----
-
-## Code Structure
-
-The code is organized into the following directories:
-
-- **[models](#models):** Contains the trained models saved in `.h5` format.
-  - **[Grid_SaveModel.h5](#models)**
-  - **[PSO_SaveModel.h5](#models)**
-  - **[Random_SaveModel.h5](#models)**
-  - **[Simple_SaveModel.h5](#models)**
-
-- **[results](#results):** Stores the performance results of the models, including performance metrics and classification outputs.
-  - **[Grid_Excel.xlsx](#results)**
-  - **[PSO](#results)**
-  - **[Random](#results)**
-  - **[Simple](#results)**
-
-- **[src](#src):** Includes the Jupyter Notebooks for implementing the models and optimization techniques.
-  - **[Grid.ipynb](#src)**
-  - **[PSO](#src)**
-  - **[Random](#src)**
-  - **[Simple](#src)**
-
-- **LICENSE:** Contains the project license file.
-- **README.md:** This readme file providing an overview and project documentation.
-
----
-
-## Data Processing and Model Architecture
-
-1. **Image Preprocessing**
-   - Images are resized to `224x224` pixels, normalized, and labeled using `LabelEncoder`.
-   - The data is split into training and validation sets, ensuring balanced class distribution.
-
-2. **Model Architecture**
-   - **Base Model:** Pre-trained VGG16 network is used as the base for transfer learning.
-   - **Custom Layers:** A series of layers including Flatten, Dropout, and Dense (Softmax activation for classification).
-   - **Optimization:** Adam optimizer with sparse categorical cross-entropy loss.
-
-3. **Training and Evaluation**
-   - Models are trained on the training set and evaluated on the validation set.
-   - Performance metrics include accuracy, confusion matrix, and classification reports.
-
-4. **Hyperparameter Optimization**
-   - **PSO, Grid Search, and Random Search** are applied to optimize learning rates and dropout rates.
-
-5. **Results Storage**
-   - The performance of each model is exported to **Excel files** for further analysis.
-   - The trained models are saved in `.h5` format for later use.
-
----
-
-## Results Analysis
-
-### Optimization Techniques
-- **Grid Search:** An exhaustive approach to hyperparameter tuning, resulting in visualized loss metrics.
-- **Random Search:** A more efficient method for parameter optimization with competitive results.
-- **PSO:** Adaptive optimization using the particle swarm algorithm, showing strong performance in fine-tuning.
-
-### Model Evaluation
-- All models, particularly the **Simple Model**, demonstrate high accuracy across the three categories (clean, littered, and recycling).
-- The results are balanced across **precision**, **recall**, and **F1-score**, ensuring effective classification for real-world applications.
-- Evaluation outputs include confusion matrices, classification reports, and performance graphs.
+This project aims to build a robust AI system for classifying urban street images. The focus is on detecting the cleanliness of streets and identifying the presence of recycling bins. The models were trained using a custom dataset, and hyperparameter optimization was applied to improve the models' performance.
 
 ---
 
 ## Project Access
 
-This repository serves as a code storage for the project and does not provide the dataset directly. For a more professional and functional view of the project, including access to the dataset, please refer to my Kaggle page:  
-[Image Classification Project on Kaggle](https://www.kaggle.com/nw8vqlafd/dataset-ic)
+This repository serves as a code storage for the project. For a more professional and functional view, including access to the full dataset, please visit the project on [Kaggle](https://www.kaggle.com/nw8vqlafd/dataset-ic).
 
 ---
 
-### Notes
-- Some code segments are written in **Portuguese (Portugal)**, as the project was developed using this language.
+## Language Note
+
+**Important**: Some sections of the code and documentation are written in **Portuguese (Portugal)**, as the project was initially developed in that language. However, this repository is structured for ease of use, with all key information available in English.
 
 ---
 
-### Links to the Models, Results, and Code:
+# Dataset
 
-- [Models Folder](#models)
-- [Results Folder](#results)
-- [Source Code Folder](#src)
+The project includes a **dataset** folder that serves as an example of the original dataset used. The dataset is divided into three subfolders:
+
+- **clean**: Images of clean streets.
+  <img src="dataset/clean/Clean_0054.png" alt="Clean Street Example" width="200"/>
+- **litter**: Images of streets with litter.
+  <img src="dataset/litter/Litter_0073.png" alt="Littered Street Example" width="200"/>
+- **recycle**: Images of streets with recycling bins (ecopoints).
+  <img src="dataset/recycle/Ecoponto_0033.png" alt="Recycle Bin Example" width="200"/>
+
+Each folder contains 5 example images to illustrate the original dataset. For the complete dataset, you can access it on [Kaggle](https://www.kaggle.com/datasets/nw8vqlafd/dataset-ic).
+
+---
+
+## Repository Structure
+
+This repository is organized into the following sections:
+
+### **1. Models (`models/`)**
+Contains the trained models saved in `.h5` format. These models were used to classify images into the respective categories:
+- **`Grid_SaveModel.h5`**: Model optimized using Grid Search.
+- **`PSO_SaveModel.h5`**: Model optimized using Particle Swarm Optimization (PSO).
+- **`Random_SaveModel.h5`**: Model optimized using Random Search.
+- **`Simple_SaveModel.h5`**: Baseline model without optimization.
+
+### **2. Results (`results/`)**
+Holds the performance metrics and results of the models:
+- **`Grid_Excel.xlsx`**: Results from the Grid Search optimization.
+- **`PSO`**: Results from the PSO optimization.
+- **`Random`**: Results from the Random Search optimization.
+- **`Simple`**: Results from the baseline model.
+
+### **3. Source Code (`src/`)**
+Includes the Jupyter Notebooks and scripts for training the models and performing hyperparameter optimization:
+- **`Grid.ipynb`**: Script for training the model with Grid Search optimization.
+- **`PSO`**: Script for training the model with PSO optimization.
+- **`Random`**: Script for training the model with Random Search optimization.
+- **`Simple`**: Script for training the baseline model.
+
+### **4. License (`LICENSE`)**
+Contains the license file for the project.
+
+### **5. Documentation (`README.md`)**
+This readme file, which provides an overview of the project.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE). Feel free to use, modify, and distribute this project.
+
+---
+
+## Contact
+
+For any questions or suggestions, please contact:
+- **Email**: [henriquetravassos03@LuisTravassos]
+- **GitHub**: [LHTravassos](https://github.com/LHTravassos)
