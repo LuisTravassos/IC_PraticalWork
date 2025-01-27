@@ -65,12 +65,6 @@ Includes the Jupyter Notebooks and scripts for training the models and performin
 - **`Random`**: Script for training the model with Random Search optimization.
 - **`Simple`**: Script for training the baseline model.
 
-### **4. License (`LICENSE`)**
-Contains the license file for the project.
-
-### **5. Documentation (`README.md`)**
-This readme file, which provides an overview of the project.
-
 ---
 
 ## License
