@@ -12,7 +12,7 @@ This project aims to build a robust AI system for classifying urban street image
 
 ## Project Access
 
-This repository serves as a code storage for the project. For a more professional and functional view, including access to the full dataset, please visit the project on [Kaggle](https://www.kaggle.com/nw8vqlafd/dataset-ic).
+This repository serves as a code storage for the project. For a more professional and functional view, including access to the full dataset, please visit the project on [Kaggle](https://www.kaggle.com/nw8vqlafd).
 
 ---
 
@@ -27,11 +27,11 @@ This repository serves as a code storage for the project. For a more professiona
 The project includes a **dataset** folder that serves as an example of the original dataset used. The dataset is divided into three subfolders:
 
 - **clean**: Images of clean streets.
-  <img src="dataset/clean/Clean_0054.png" alt="Clean Street Example" width="200"/>
+  <br><img src="dataset/clean/Clean_0054.png" alt="Clean Street Example" width="200"/>
 - **litter**: Images of streets with litter.
-  <img src="dataset/litter/Litter_0073.png" alt="Littered Street Example" width="200"/>
+  <br><img src="dataset/litter/Litter_0073.png" alt="Littered Street Example" width="200"/>
 - **recycle**: Images of streets with recycling bins (ecopoints).
-  <img src="dataset/recycle/Ecoponto_0033.png" alt="Recycle Bin Example" width="200"/>
+  <br><img src="dataset/recycle/Ecoponto_0033.png" alt="Recycle Bin Example" width="200"/>
 
 Each folder contains 5 example images to illustrate the original dataset. For the complete dataset, you can access it on [Kaggle](https://www.kaggle.com/datasets/nw8vqlafd/dataset-ic).
 
@@ -79,5 +79,4 @@ This project is licensed under the [MIT License](/LICENSE). Feel free to use, mo
 ## Contact
 
 For any questions or suggestions, please contact:
-- **Email**: [henriquetravassos03@LuisTravassos]
 - **GitHub**: [LHTravassos](https://github.com/LHTravassos)
