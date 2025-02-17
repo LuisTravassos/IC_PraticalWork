@@ -1,24 +1,29 @@
-# Image Classification Project
+# Street Image Classification Project  
 
-Welcome to the **Image Classification Project**! This repository contains the code and documentation for classifying urban street images into three categories: **clean**, **littered**, and **with recycling bins (ecopoints)**. The project leverages deep learning techniques, including transfer learning, and various hyperparameter optimization methods to achieve efficient classification.
-
----
-
-## Project Overview
-
-This project aims to build a robust AI system for classifying urban street images. The focus is on detecting the cleanliness of streets and identifying the presence of recycling bins. The models were trained using a custom dataset, and hyperparameter optimization was applied to improve the models' performance.
+This repository hosts the codebase for a **Python-driven machine learning project** focused on classifying urban street images into three categories: `clean`, `littered`, and `with recycling bins (ecopoints)`. The implementation leverages convolutional neural networks (CNNs), transfer learning, and hyperparameter optimization techniques.  
 
 ---
 
-## Project Access
-
-This repository serves as a code storage for the project. For a more professional and functional view, including access to the full dataset, please visit the project on [Kaggle](https://www.kaggle.com/nw8vqlafd).
+## Technical Implementation  
+- **Core Tools**: Python, TensorFlow/Keras, Scikit-learn, OpenCV.  
+- **Model Architectures**: Fine-tuned pre-trained CNNs (e.g., ResNet, MobileNet) for feature extraction.  
+- **Hyperparameter Optimization**: Compared performance of Particle Swarm Optimization (PSO), Grid Search, and Random Search.  
+- **Data Preprocessing**: Balanced class distributions and applied augmentation (rotation, scaling) to mitigate overfitting.  
 
 ---
 
-## Language Note
+## Dataset Access  
+The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/nw8vqlafd/street-classification-dataset). A subset of example images is included in the `dataset/` folder for quick experimentation.  
 
-**Important**: Some sections of the code and documentation are written in **Portuguese (Portugal)**, as the project was initially developed in that language. However, this repository is structured for ease of use, with all key information available in English.
+**Dataset Structure**:  
+- **Clean**: Example images of debris-free streets.  
+- **Litter**: Images of streets with scattered waste.  
+- **Recycle**: Streets featuring recycling bins (ecopoints).  
+
+---
+
+## Language Note  
+Code and documentation are primarily in **Portuguese (Portugal)**, but key technical descriptions are provided in English.  
 
 ---
 
